@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.mainLayout{
+			background-color: #0000CD;
+			font-family: arial;
+			font-size: 14pt;
+			margin: 5pt;
+		}
+		.contentLayout{
+			background-color: #87CEFA;
+			border: 2px;
+			border-color: black;
+			padding: 10px;
+			align-content: center;
+		}
+		.tableLayout{
+			align-self: auto;
+		}
+	</style><!-- Layout CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Interactive</title>
+	<script src="javascript/externalscript.js"></script>
+</head>
+<header style="background-color: #7FFFD4;">
+	<style>
+		/* Style The Dropdown Button */
+		.dropbtn {
+			background-color: #7FFFD4;
+			color: black;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+		}
+
+		/* The container <div> - needed to position the dropdown content */
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+
+		/* Dropdown Content (Hidden by Default) */
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #AFEEEE;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
+
+		/* Links inside the dropdown */
+		.dropdown-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+
+		/* Change color of dropdown links on hover */
+		.dropdown-content a:hover {
+			background-color: #40E0D0
+		}
+
+		/* Show the dropdown menu on hover */
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+
+		/* Change the background color of the dropdown button when the dropdown content is shown */
+		.dropdown:hover .dropbtn {
+			background-color: #66CDAA;
+		}
+	</style>
+	<div class="dropdown">
+		<button class="dropbtn">Menu</button>
+		<div class="dropdown-content">
+			<a href="index.html">Home</a>
+			<a href="form_and_javascript.html">Interactive</a>
+			<a href="table.html">Database</a>
+		</div>
+	</div><!--Nav Bar HTML tags-->
+</header>
+<body class="contentLayout">
+	<div style="text-align: center;">
+		<form style="align-content: left; background-color: white;" id="changeable">
+			<h4>Choose your Favorite Color</h4>
+			<input type="radio" id="red" name="fav_color" value="Red" onclick="changeObjectBg('red')">
+			<label for="red">Red</label><br>
+			<input type="radio" id="orange" name="fav_color" value="Orange" onclick="changeObjectBg('orange')">
+			<label for="orange">Orange</label><br>
+			<input type="radio" id="yellow" name="fav_color" value="Yellow" onclick="changeObjectBg('yellow')">
+			<label for="yellow">Yellow</label><br>
+			<input type="radio" id="green" name="fav_color" value="Green" onclick="changeObjectBg('green')">
+			<label for="green">Green</label><br>
+			<input type="radio" id="blue" name="fav_color" value="Blue" onclick="changeObjectBg('blue')">
+			<label for="blue">Blue</label><br>
+			<input type="radio" id="indigo" name="fav_color" value="Indigo" onclick="changeObjectBg('indigo')">
+			<label for="indigo">Indigo</label><br>
+			<input type="radio" id="violet" name="fav_color" value="Violet" onclick="changeObjectBg('violet')">
+			<label for="violet">Violet</label><br>
+		</form>
+	</div><!-- Allows user to pick color using form -->
+	<script type="text/javascript">
+		function changeObjectBg(color) {
+			console.log("color change test");
+			document.getElementById('changeable').style.backgroundColor = color;
+		}
+	</script>
+	</br>
+	<button onclick="choosePicture()">Click Me!</button><!-- Allows user to generate random picture using a button -->
+		<img id="image_placeholder" style="width: 20%; height: 20%; align-self: left;">
+</body>
+</html>

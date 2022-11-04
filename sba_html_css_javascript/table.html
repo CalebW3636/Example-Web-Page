@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html class="mainLayout">
+<head>
+	<style type="text/css">
+		.mainLayout{
+			background-color: #0000CD;
+			font-family: arial;
+			font-size: 14pt;
+			margin: 5pt;
+		}
+		.contentLayout{
+			background-color: #87CEFA;
+			border: 2px;
+			border-color: black;
+			text-align: left;
+		}
+		/*.tableLayout
+		table, th, td, tr{
+			border: 1px solid black;
+			padding: 8px;
+			width: 100%;
+			text-align: left;
+		}
+*/	</style><!-- Layout CSS -->
+	<style>
+		ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color: #333;
+		}
+
+		li {
+		  float: left;
+		}
+
+		li a, .dropbtn {
+		  display: inline-block;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		}
+
+		li a:hover, .dropdown:hover .dropbtn {
+		  background-color: red;
+		}
+
+		li.dropdown {
+		  display: inline-block;
+		}
+
+		.dropdown-content {
+		  display: none;
+		  position: absolute;
+		  background-color: #f9f9f9;
+		  min-width: 160px;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		  z-index: 1;
+		}
+
+		.dropdown-content a {
+		  color: black;
+		  padding: 12px 16px;
+		  text-decoration: none;
+		  display: block;
+		  text-align: left;
+		}
+
+		.dropdown-content a:hover {background-color: #f1f1f1;}
+
+		.dropdown:hover .dropdown-content {
+		  display: block;
+		}
+	</style><!-- Navbar CSS -->
+	<style>
+		#customers {
+			font-family: Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		#customers td, #customers th {
+			border: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+		#customers tr/*:hover*/ {background-color: #ddd;}
+
+		#customers th {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-align: left;
+			background-color: #04AA6D;
+			color: white;
+		}
+	</style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Database</title>
+</head>
+<header style="background-color: #7FFFD4;">
+	<style>
+		/* Style The Dropdown Button */
+		.dropbtn {
+			background-color: #7FFFD4;
+			color: black;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+		}
+
+		/* The container <div> - needed to position the dropdown content */
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+
+		/* Dropdown Content (Hidden by Default) */
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #AFEEEE;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
+
+		/* Links inside the dropdown */
+		.dropdown-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+
+		/* Change color of dropdown links on hover */
+		.dropdown-content a:hover {
+			background-color: #40E0D0
+		}
+
+		/* Show the dropdown menu on hover */
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+
+		/* Change the background color of the dropdown button when the dropdown content is shown */
+		.dropdown:hover .dropbtn {
+			background-color: #66CDAA;
+		}
+	</style>
+	<div class="dropdown">
+		<button class="dropbtn">Menu</button>
+		<div class="dropdown-content">
+			<a href="index.html">Home</a>
+			<a href="form_and_javascript.html">Interactive</a>
+			<a href="table.html">Database</a>
+		</div>
+	</div><!--Nav Bar HTML tags-->
+</header>
+<body class="mainLayout">
+	<table id="customers"><!-- Basic table -->
+		<tr>
+			<th>Company</th>
+			<th>Contact</th>
+			<th>Country</th>
+		</tr>
+		<tr>
+			<td>Alfreds Futterkiste</td>
+			<td>Maria Anders</td>
+			<td>Germany</td>
+		</tr>
+		<tr>
+			<td>Berglunds snabbköp</td>
+			<td>Christina Berglund</td>
+			<td>Sweden</td>
+		</tr>
+		<tr>
+			<td>Centro comercial Moctezuma</td>
+			<td>Francisco Chang</td>
+			<td>Mexico</td>
+		</tr>
+		<tr>
+			<td>Ernst Handel</td>
+			<td>Roland Mendel</td>
+			<td>Austria</td>
+		</tr>
+		<tr>
+			<td>Island Trading</td>
+			<td>Helen Bennett</td>
+			<td>UK</td>
+		</tr>
+		<tr>
+			<td>Königlich Essen</td>
+			<td>Philip Cramer</td>
+			<td>Germany</td>
+		</tr>
+		<tr>
+			<td>Laughing Bacchus Winecellars</td>
+			<td>Yoshi Tannamuri</td>
+			<td>Canada</td>
+		</tr>
+		<tr>
+			<td>Magazzini Alimentari Riuniti</td>
+			<td>Giovanni Rovelli</td>
+			<td>Italy</td>
+		</tr>
+		<tr>
+			<td>North/South</td>
+			<td>Simon Crowther</td>
+			<td>UK</td>
+		</tr>
+		<tr>
+			<td>Paris spécialités</td>
+			<td>Marie Bertrand</td>
+			<td>France</td>
+		</tr>
+	</table>
+	<form class="contentLayout" style="padding: 5pt;" action="addTableEntry()">
+		<label for="company">Company Name:</label>
+		<br>
+		<input type="text" name="company" id="submit_company">
+		<br>
+		<label for="contact">Contact:</label>
+		<br>
+		<input type="text" name="contact" placeholder="First and Last Name" id="submit_contact">
+		<br>
+		<label for="country">Country:</label>
+		<br>
+		<input type="text" name="country" id="submit_country">
+		<br>
+		<input type="button" name="submit" value="Submit">
+	</form>
+	<script type="text/javascript">
+		function addTableEntry() {
+			var table = document.getElementById('customers');
+			var row = table.insertRow()
+			var cell1 = row.insertCell("submit_company")
+			var cell2 = row.insertCell("submit_contact")
+			var cell3 = row.insertCell("submit_country")
+		}
+	</script>
+</body>
+</html>

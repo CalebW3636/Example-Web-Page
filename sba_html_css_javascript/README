@@ -1,0 +1,4 @@
+README
+Home page has basic text with the menu
+Interactive has a color changing script that works with a form to change a div background color and a button that generates a random picture
+Database has an example table with a form to add information to the server if there was one present
